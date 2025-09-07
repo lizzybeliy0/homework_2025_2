@@ -12,14 +12,14 @@
  * 
  * @returns {Object} result - новый объект без значений null, undefined, ""
 */
-function compressObject(obj){
+let compressObject = obj => {
 
     if (typeof obj !== "object") {
-        return{};
+        return {};
     }
 
     if (obj === null) {
-        return{};
+        return {};
     }
 
     return Object.fromEntries(
@@ -27,4 +27,4 @@ function compressObject(obj){
             value !== null && value !== undefined && value !== ""
         )
     );
-}
+};
